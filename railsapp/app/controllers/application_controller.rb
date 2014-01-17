@@ -8,13 +8,7 @@ class ApplicationController < ActionController::Base
   private
 
   def set_locale
-    I18n.locale = params[:locale] || extract_locale_from_accept_language
-  end
-
-  def extract_locale_from_accept_language
-    request.env['HTTP_ACCEPT_LANGUAGE'].scan(/^[a-z]{2}/).first.to_sym.tap{|l|
-      break I18n.default_locale unless I18n::available_locales.include? l
-    }
+    I18n.locale = params[:locale] || http_accept_language.compatible_language_from I18n.available_locales
   end
 
 end
