@@ -1,8 +1,8 @@
 Shopping::Application.routes.draw do
-  resources :memos
 
   # get '/(:locale)' => 'welcome#index'
   scope "/(:locale)", locale: /en|ja/ do
+    resources :memos
   end
   # The priority is based upon order of creation: first created -> highest priority.
   # See how all your routes lay out with "rake routes".
