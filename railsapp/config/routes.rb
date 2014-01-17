@@ -1,4 +1,6 @@
 Shopping::Application.routes.draw do
+  resources :memos
+
   # get '/(:locale)' => 'welcome#index'
   scope "/(:locale)", locale: /en|ja/ do
   end
