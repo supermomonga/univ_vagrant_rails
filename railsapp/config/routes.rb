@@ -1,7 +1,8 @@
 Shopping::Application.routes.draw do
 
-  # get '/(:locale)' => 'welcome#index'
+  # get '/(:locale)' => 'memos#index'
   scope "/(:locale)", locale: /en|ja/ do
+    root 'memos#index'
     resources :memos
   end
   # The priority is based upon order of creation: first created -> highest priority.
