@@ -1,10 +1,30 @@
 doctype
 html
   head
-    title
-      | Shopping
+    meta name="viewport" content="width=device-width, initial-scale=1.0"
+    title= content_for?(:title) ? yield(:title) : t('SiteName')
     = stylesheet_link_tag "application", media: "all", "data-turbolinks-track" => true
     = javascript_include_tag "application", "data-turbolinks-track" => true
     = csrf_meta_tags
   body
-    = yield
+    #wrap
+      header
+        = render 'layouts/navigation'
+      main role="main"
+        .container
+          .content
+            .row
+              .span12
+                = render 'layouts/messages'
+                = yield
+        #push
+    footer
+      .container
+        .row
+          .span12
+            p (C) 2014~ SERVICENAME Some rights reserved.
+
+javascript:
+  $(function(){
+    $('#push').css('height', $('footer').outerHeight() + 'px');
+  });

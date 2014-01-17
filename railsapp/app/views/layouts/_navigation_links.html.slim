@@ -1,0 +1,14 @@
+ul.nav
+  li= link_to t('Listing memos'), memos_path
+  /- if user_signed_in?
+  /  li= link_to '転送設定一覧', redirects_path
+  /  li= link_to '新規転送設定', new_redirect_path
+/ul.nav.pull-right
+/  - if user_signed_in?
+/    - if current_user.has_role? :admin
+/      li= link_to '管理メニュー', users_path
+/    li= link_to '会員情報変更', edit_user_registration_path
+/    li= link_to 'ログアウト', destroy_user_session_path, :method=>'delete'
+/  - else
+/    li= link_to '新規会員登録', new_user_registration_path
+/    li= link_to 'ログイン', new_user_session_path

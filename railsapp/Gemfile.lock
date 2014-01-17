@@ -10,6 +10,7 @@ GEM
       erubis (~> 2.7.0)
       rack (~> 1.5.2)
       rack-test (~> 0.6.2)
+    active_decorator (0.3.4)
     activemodel (4.0.2)
       activesupport (= 4.0.2)
       builder (~> 3.1.0)
@@ -33,7 +34,10 @@ GEM
       erubis (>= 2.6.6)
     binding_of_caller (0.7.2)
       debug_inspector (>= 0.0.1)
+    bootstrap-sass (2.3.2.2)
+      sass (~> 3.2)
     builder (3.1.4)
+    cancan (1.6.10)
     coderay (1.1.0)
     coffee-rails (4.0.1)
       coffee-script (>= 2.2.0)
@@ -90,6 +94,7 @@ GEM
     rake (10.1.1)
     rdoc (4.1.1)
       json (~> 1.4)
+    rolify (3.2.0)
     sass (3.2.13)
     sass-rails (4.0.1)
       railties (>= 4.0.0, < 5.0)
@@ -144,14 +149,18 @@ PLATFORMS
   ruby
 
 DEPENDENCIES
+  active_decorator
   better_errors
   binding_of_caller
+  bootstrap-sass (~> 2.3.2.2)
+  cancan
   coffee-rails (~> 4.0.0)
   devise
   http_accept_language
   jbuilder (~> 1.2)
   jquery-rails
   rails (= 4.0.2)
+  rolify
   sass-rails (~> 4.0.0)
   sdoc
   simple_form
