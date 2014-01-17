@@ -1,4 +1,24 @@
 ja:
+  cancel_my_account: 退会する
+  cancel_my_account_link: 退会はこちらから
+  New: 新規作成
+  Edit: 編集
+  Destroy: 削除
+  Back: 戻る
+  Show: 詳細
+  Update: 変更
+  Sign in: ログイン
+  Sign up: 新規会員登録
+  Forgot your password?: パスワードをお忘れですか？
+  Didn't receive confirmation instructions?: 確認メールを受け取れなかった方
+  Didn't receive unlock instructions?: アカウント有効化の手順を受け取れなかった方
+  Are_you_sure?: 本当によろしいですか？
+  Forgot your password?: パスワードをお忘れですか？
+  Send me reset password instructions: パスワード再設定の案内を送信
+  Change your password: パスワードを変更
+  Change my password: パスワードを変更する
+  Resend confirmation instructions: 確認メールの再送信
+  Resend me confirmation instructions: 確認メールを再送信
   Listing memos: メモ一覧
   date:
     abbr_day_names:

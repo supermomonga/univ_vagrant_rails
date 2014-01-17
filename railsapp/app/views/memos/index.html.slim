@@ -2,7 +2,7 @@ h1= t 'Listing memos'
 
 table
   tr
-    th Content
+    th= t 'ja.simple_form.labels.memo.content'
     th
     th
     th
@@ -10,10 +10,10 @@ table
   - @memos.each do |memo|
     tr
       td = memo.content
-      td = link_to 'Show', memo
-      td = link_to 'Edit', edit_memo_path(memo)
-      td = link_to 'Destroy', memo, data: {:confirm => 'Are you sure?'}, :method => :delete
+      td = link_to t('Show'), memo
+      td = link_to t('Edit'), edit_memo_path(memo)
+      td = link_to t('Destroy'), memo, data: {confirm: t('Are you sure?')}, method: :delete
 
 br
 
-= link_to 'New Memo', new_memo_path
+= link_to t('New'), new_memo_path
